@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Login from '../Login/Login';
 import Info from '../Login/Info';
+import MapContainer from "../../api/MapContainer2";
+
 
 const { kakao } = window;
 
@@ -17,19 +19,11 @@ var getCookie = function (name) {
   return value ? value[2] : null;
 }
 
-
-
 function LandingPage() {
-
-
   useEffect(() => {
-    const container = document.getElementById("map");
-    const options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
-      level: 3,
-    };
-    const map = new kakao.maps.Map(container, options);
-  }, []);
+    MapContainer();
+  });
+
 
   return (
     // 지도

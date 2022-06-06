@@ -1,15 +1,15 @@
 import React from "react";
 // import axios from "axios";
 // import { useNavigate, Link } from "react-router-dom";
-
+import styles from './Ticket.module.css';
 
 function TicketList() {
 
   return (
     <>
-    <div>
-      안녕하세요
-    </div>
+      <div className={styles.background1}>
+        <div className={styles.card}></div>
+      </div>
     </>
   );
 }

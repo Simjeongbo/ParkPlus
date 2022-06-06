@@ -144,31 +144,6 @@ function RegisterPage({ closeModal }) {
           </div>
         </div>
 
-        {/* <div className={styles.SignUpForm}>
-          <div style={
-          styles.title}>
-              <form style={{ display: 'flex', flexDirection: 'column' }}
-                  onSubmit={onSubmitHandler}
-              >
-                      <div className={styles.info}>이메일
-                          <input type='email' className={styles.input}  value={Email} onChange={onEmailHandler} />
-                          </div>
-
-                      <div className={styles.info}>이름
-                          <input type='text' className={styles.input}  value={Name} onChange={onNameHandler} />
-                          </div>
-
-                      <div className={styles.info}>비밀번호
-                          <input type='password' className={styles.input}  value={Password} onChange={onPasswordHandler} />
-                          </div>
-
-                      <div className={styles.info}>비밀번호 확인
-                          <input type='password' className={styles.input}  value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
-                          </div>
-
-                      <div className={styles.info}>전화번호
-                          <input type='text' className={styles.input}  value={HandPhone} onChange={onHandPhoneHandler} />
-                          </div> */}
       </div>
     </form>
   );

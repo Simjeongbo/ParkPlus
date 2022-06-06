@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import styles from "./Login.module.css";
 import * as AiIcons from "react-icons/ai";
+import * as ImIcons from "react-icons/im";
 
 var deleteCookie = function (name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1999 00:00:10 GMT;";
@@ -44,27 +45,30 @@ function Info() {
   return (
     <>
       <form>
+        
         <div className={styles.loginBox2}>
-          <div className={styles.design2}></div>
-          <div className={styles.loginForm2}>
-            <div className={styles.loginTitle2}>
-              <div>{username}</div>
-              <h2>
-                <AiIcons.AiFillCar />
-              </h2>
+            <div className={styles.design2}>
+                <div className={styles.hidden}><ImIcons.ImArrowRight/></div>
             </div>
-            <div>
-              <li>{email}</li>
-              <li>{carnum}</li>
-              <li>{tel}</li>
+            <div className={styles.loginForm2}>
+
+                <div className={styles.loginTitle2}>
+                <h1>{username}</h1>
+                <h2><AiIcons.AiFillCar/></h2>
+                </div>
+                <div className={styles.user}></div>
+                <div className={styles.userD}>
+                <li><h5>이메일</h5> <h4>{email}</h4></li>
+                <li><h5>전화번호</h5> <h4>{tel}</h4></li>
+                <li><h5>차량번호</h5> <h4>{carnum}</h4></li>
+                </div>
+                <div className={styles.buttonS}>
+                <a className={styles.button1}>정보수정</a>
+                <a className={styles.button2} onClick={onClickHandler}>
+                    로그아웃
+                </a>
+                </div>
             </div>
-            <div className={styles.buttonS}>
-              <a className={styles.button1}>정보수정</a>
-              <a className={styles.button2} onClick={onClickHandler}>
-                로그아웃
-              </a>
-            </div>
-          </div>
         </div>
       </form>
     </>
