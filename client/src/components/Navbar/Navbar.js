@@ -15,16 +15,17 @@ function Navbar() {
 
   return (
     <>
-      {openModal && <div id="Etc"
-                        style={{
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%",
-                        }}
-                    >
-                        <Etc closeModal={setOpenModal}/>
-                    </div> 
-      }
+      {openModal && (
+        <div id="Etc"
+            style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            }}
+        >
+            <Etc closeModal={setOpenModal}/>
+        </div> 
+      )}
       <IconContext.Provider value={{ color: '#fff' }}>
         <section className={sidebar ? 'navbar active' : 'navbar'}>
           <Link to='#' className='menu-bars' onClick={showSidebar}>
@@ -50,7 +51,7 @@ function Navbar() {
             })}
             <li className='nav-text'><a 
                                         onClick={() => {
-                                        setOpenModal(true);
+                                          setOpenModal(true);
                                         }}
                                       >
                                           <IoIcons.IoMdHelpCircle /><span>제작정보</span>

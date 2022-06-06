@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import RegisterPage from "./RegisterPage";
 import styles from "./Login.module.css";
@@ -110,32 +109,6 @@ function Login() {
         </div>
       </form>
 
-      {/* 로그인 모달창 */}
-      {/* {openModal && <div id="RegisterPage"
-                style={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                }}
-            >
-                <RegisterPage closeModal={setOpenModal}/>
-            </div> }
-            <a className={styles.openModalBtn3} onClick={onClickHandler}>로그아웃</a>
-            <div className={styles.RLogin}>
-                <a
-                    className={styles.openModalBtn1}
-                    onClick={() => {
-                        setOpenModal(true);
-                    }}
-                >
-                    로그인
-                </a>
-
-                <Link to="/register">
-                    <a className={styles.openModalBtn2}>회원가입</a>
-                </Link>
-                <a className={styles.openModalBtn3} onClick={onClickHandler}>로그아웃</a>
-            </div> */}
     </div>
   );
 }

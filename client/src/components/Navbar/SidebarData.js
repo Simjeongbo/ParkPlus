@@ -17,14 +17,8 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: '주차장등록',
+        title: '주차장등록(다른곳으로 옮길거)',
         path: '/add',
-        icon: <IoIcons.IoIosPaper />,
-        cName: 'nav-text'
-    },
-    {
-        title: '주차장확인',
-        path: '/list',
         icon: <IoIcons.IoIosPaper />,
         cName: 'nav-text'
     },
@@ -40,10 +34,4 @@ export const SidebarData = [
         icon: <FaIcons.FaEnvelopeOpenText />,
         cName: 'nav-text'
     },
-    // {
-    //     title: '제작정보',
-    //     path: '/support',
-    //     icon: <IoIcons.IoMdHelpCircle />,
-    //     cName: 'nav-text'
-    // }
 ];

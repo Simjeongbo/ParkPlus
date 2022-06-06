@@ -73,6 +73,10 @@ app.post("/api/users/login", (req, res) => {
         // 토큰을 저장한다.  어디에 ?  쿠키 , 로컳스토리지
         res
           .cookie("x_auth", user.token)
+          .cookie("id", user.name)
+          .cookie("email", user.email)
+          .cookie("carnum", user.carnum)
+          .cookie("tel", user.tel)
           .status(200)
           .json({ loginSuccess: true, userId: user._id });
       });
@@ -90,9 +94,8 @@ app.get("/api/users/auth", auth, (req, res) => {
     isAuth: true,
     email: req.user.email,
     name: req.user.name,
-    lastname: req.user.lastname,
-    role: req.user.role,
-    image: req.user.image,
+    tel: req.user.tel,
+    carnum: req.user.carnum,
   });
 });
 
